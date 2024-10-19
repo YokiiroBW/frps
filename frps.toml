@@ -1,35 +1,13 @@
-bindAddr = "0.0.0.0"
-bindPort = 7000
-#kcpBindPort = 7000
-quicBindPort = 7000
-
-vhostHTTPPort = 80
-vhostHTTPSPort = 443
-
-transport.maxPoolCount = 2000
-transport.tcpMux = true
-transport.tcpMuxKeepaliveInterval = 60
-transport.tcpKeepalive = 7200
-transport.tls.force = false
-
-webServer.addr = "0.0.0.0"
-webServer.port = 7500
-webServer.user = "admin"
-webServer.password = "admin"
-webServer.pprofEnable = false
-
-log.to = "./frps.log"
-log.level = "info"
-log.maxDays = 3
-log.disablePrintColor = false
-
-auth.method = "token"
-auth.token = "12345678"
-
-allowPorts = [
-  { start = 10001, end = 50000 }
-]
-
-maxPortsPerClient = 8
-udpPacketSize = 1500
-natholeAnalysisDataReserveHours = 168
+# 服务器开放给客户端的frp端口
+bind_port = 57000
+# http端口
+vhost_http_port = 8080
+# https端口
+vhost_https_port = 8081
+dashboard_addr = 0.0.0.0
+# 控制面板端口,用户名,密码
+dashboard_port = 57500
+dashboard_user = YokiiroBW
+dashboard_pwd = telunsu112233
+# frps服务token,拥有此token的客户端才允许连接
+token = 417454
